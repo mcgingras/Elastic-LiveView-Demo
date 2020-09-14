@@ -1,0 +1,58 @@
+{
+    "mappings": {
+        "properties": {
+            "account_number": {
+                "type": "keyword"
+            },
+            "balance": {
+                "type": "scaled_float",
+                "scaling_factor": 100
+            },
+            "firstname": {
+                "type": "text"
+            },
+            "lastname": {
+                "type": "text"
+            },
+            "address": {
+                "type": "text",
+                "fields": {
+                    "count": {
+                        "type": "token_count",
+                        "analyzer": "standard"
+                    }
+                }
+            },
+            "employer": {
+                "type": "text",
+                "fields": {
+                    "count": {
+                        "type": "token_count",
+                        "analyzer": "standard"
+                    }
+                }
+            },
+            "email": {
+                "type": "text",
+                "fields": {
+                    "count": {
+                        "type": "token_count",
+                        "analyzer": "standard"
+                    }
+                }
+            },
+            "city": {
+                "type": "text",
+                "fields": {
+                    "count": {
+                        "type": "token_count",
+                        "analyzer": "standard"
+                    }
+                }
+            },
+            "state": {
+                "type": "text"
+            }
+        }
+    }
+}
